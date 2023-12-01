@@ -4,7 +4,7 @@ module.exports = app => {
     var router = require("express").Router();
   
     // Retrieve all Storm
-    router.get("/", storm.findAll);
+    router.get("/", storm.findOne);
 
-    app.use('/api/storm', router);
+    app.use('/api/storm/:city_name', router);
   };
